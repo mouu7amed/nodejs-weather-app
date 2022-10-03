@@ -6,7 +6,7 @@ const loadingSpinner = document.querySelector(".loading");
 const fetchData = async (address) => {
   loadingSpinner.classList.toggle("loading-show");
 
-  await fetch(`http://localhost:3000/forecast?address=${address}`)
+  await fetch(`/forecast?address=${address}`)
     .then((response) => {
       response.json().then((data) => {
         loadingSpinner.classList.toggle("loading-show");
