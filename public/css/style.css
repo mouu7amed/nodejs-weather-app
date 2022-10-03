@@ -98,7 +98,7 @@ header .logo {
   .body .forecast {
     width: 450px;
     height: 250px;
-    padding: 1rem 3rem;
+    padding: 0 3rem;
   }
 }
 
@@ -106,6 +106,13 @@ header .logo {
   font-size: 1.4rem;
   font-weight: 400;
   color: #707070;
+}
+
+.body .forecast .location {
+  font-weight: 400;
+  color: #707070;
+  font-style: italic;
+  margin-top: -0.5rem;
 }
 
 .body .forecast .description {

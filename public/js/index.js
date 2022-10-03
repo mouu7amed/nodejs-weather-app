@@ -20,6 +20,7 @@ const fetchData = async (address) => {
 
         const forecast = {
           cityName: data.location.split(","),
+          location: data.location,
           temperature: data.forecast.temperature,
           icon: data.forecast.weather_icons[0],
           humidity: data.forecast.humidity,
@@ -33,6 +34,7 @@ const fetchData = async (address) => {
           cityEl.innerHTML = forecast.cityName[0];
         }
         document.querySelector(".description").innerHTML = forecast.description;
+        document.querySelector(".location").innerHTML = forecast.location;
         document.querySelector(
           ".temp"
         ).innerHTML = ` ${forecast.temperature}°C`;
