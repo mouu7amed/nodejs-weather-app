@@ -15,6 +15,8 @@ const fetchData = async (address) => {
         }
 
         document.querySelector(".forecast").style.backgroundColor = "#fff";
+        document.querySelector(".forecast").style.boxShadow =
+          "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px";
 
         const forecast = {
           cityName: data.location.split(","),
