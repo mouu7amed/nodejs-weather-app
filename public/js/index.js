@@ -33,8 +33,11 @@ const fetchData = async (address) => {
         if (forecast.cityName.length > 0) {
           cityEl.innerHTML = forecast.cityName[0];
         }
+        document.querySelector(".location").innerHTML = "";
         document.querySelector(".description").innerHTML = forecast.description;
-        document.querySelector(".location").innerHTML = forecast.location;
+        if (forecast.location.length < 30) {
+          document.querySelector(".location").innerHTML = forecast.location;
+        }
         document.querySelector(
           ".temp"
         ).innerHTML = ` ${forecast.temperature}°C`;
